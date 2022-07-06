@@ -3,7 +3,7 @@ package sanitize
 import (
 	"fmt"
 
-	tfjson "github.com/spacelift-io/terraform-json"
+	tfjson "github.com/hashicorp/terraform-json"
 )
 
 type SanitizeStateModuleChangeMode string
