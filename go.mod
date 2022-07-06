@@ -1,4 +1,4 @@
-module github.com/spacelift-io/terraform-json
+module github.com/hashicorp/terraform-json
 
 go 1.18
 

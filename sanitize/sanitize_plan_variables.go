@@ -4,7 +4,7 @@
 package sanitize
 
 import (
-	tfjson "github.com/spacelift-io/terraform-json"
+	tfjson "github.com/hashicorp/terraform-json"
 )
 
 // SanitizePlanVariables traverses a map of PlanVariable and replaces

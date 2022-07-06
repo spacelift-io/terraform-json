@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	tfjson "github.com/spacelift-io/terraform-json"
+	tfjson "github.com/hashicorp/terraform-json"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 )
 

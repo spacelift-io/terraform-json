@@ -6,7 +6,7 @@ package sanitize
 import (
 	"testing"
 
-	tfjson "github.com/spacelift-io/terraform-json"
+	tfjson "github.com/hashicorp/terraform-json"
 )
 
 func TestCopyStructureCopy(t *testing.T) {
