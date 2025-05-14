@@ -226,6 +226,11 @@ type Change struct {
 	// might change in the future. However, not all Importing changes will
 	// contain generated config.
 	GeneratedConfig string `json:"generated_config,omitempty"`
+
+	// BeforeIdentity and AfterIdentity are representations of the resource
+	// identity value both before and after the action.
+	BeforeIdentity interface{} `json:"before_identity,omitempty"`
+	AfterIdentity  interface{} `json:"after_identity,omitempty"`
 }
 
 // Importing is a nested object for the resource import metadata.
@@ -233,6 +238,16 @@ type Importing struct {
 	// The original ID of this resource used to target it as part of planned
 	// import operation.
 	ID string `json:"id,omitempty"`
+
+	// Unknown indicates the ID or identity was unknown at the time of
+	// planning. This would have led to the overall change being deferred, as
+	// such this should only be true when processing changes from the deferred
+	// changes list.
+	Unknown bool `json:"unknown,omitempty"`
+
+	// The identity can be used instead of the ID to target the resource as part
+	// of the planned import operation.
+	Identity interface{} `json:"identity,omitempty"`
 }
 
 // PlanVariable is a top-level variable in the Terraform plan.
