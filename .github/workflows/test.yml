@@ -39,6 +39,11 @@ jobs:
           - "1.18"
           - "1.19"
           - "1.20"
+        exclude:
+          # Go 1.18 has no installable build for the Apple Silicon
+          # macos-latest runners, so skip that combination.
+          - os: macos-latest
+            go: "1.18"
     steps:
       - name: Checkout
         uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # https://github.com/actions/checkout/releases/tag/v3.6.0
